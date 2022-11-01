@@ -1,9 +1,9 @@
 #
 #-------------------------------------------------------------#
 #  创建者：https://v2rayse.com
-#  创建时间：2022-10-27 14:28:45
+#  创建时间：2022-11-01 22:42:09
 #  模版：v2rayse默认模版
-#  节点数量：6
+#  节点数量：7
 #-------------------------------------------------------------#
 #
 port: 7890
@@ -13,81 +13,88 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"type":"vmess","name":"🇺🇸UnitedStates_1","ws-opts":{"path":"/vmess","headers":{"host":"Vipmahsa"}},"server":"74.208.33.70","port":"80","uuid":"4becfd9c-0f78-41af-9ab9-5f2a3a52be79","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"vmess","name":"🇺🇸UnitedStates_2","ws-opts":{"path":"/vmess","headers":{"host":"Vipmahsa"}},"server":"74.208.33.70","port":"80","uuid":"4becfd9c-0f78-41af-9ab9-5f2a3a52be79","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"vmess","name":"🇮🇩Indonesia","ws-opts":{"path":"/vmess","headers":{"host":"Vipmahsa"}},"server":"41.216.177.147","port":"80","uuid":"7db510d4-d272-4c77-a8b8-cd4fd5a830c3","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"vmess","name":"🇯🇵Japan","ws-opts":{"path":"/vmess","headers":{"host":"Vipmahsa"}},"server":"139.162.119.159","port":"80","uuid":"f085e9a1-6af4-4806-992e-161057c0383e","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"vmess","name":"🇺🇸Honolulu@game_file2020","http-opts":{"path":["/"]},"server":"208.83.235.250","port":"80","uuid":"74a5b28c-ec2d-48f7-b980-a4fb62a17490","alterId":"0","cipher":"auto","network":"http"}
-  - {"type":"vmess","name":"@v2rayNG99منبعکانفینگ","ws-opts":{"path":"/sshkit/Araya9i/6351566f1af78/","headers":{"host":"zoom.us"}},"server":"id-lb.vhax.net","port":"80","uuid":"6fea1649-425b-4092-bf53-29792152c925","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"VME","ws-opts":{"path":"/telegram-id-@privatevpns"},"server":"165.22.18.205","port":"80","uuid":"2aac77de-b3e4-4017-845c-ca1380f2e8d0","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"Shdow","ws-opts":{"path":"/telegram-id-@privatevpns"},"server":"5.75.135.52","port":"80","uuid":"2aac77de-b3e4-4017-845c-ca1380f2e8d0","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"My","ws-opts":{"path":"/sshkit/Derty76/634d98433b103/","headers":{"host":"zoom.us"}},"server":"41.216.177.234","port":"80","uuid":"6fea1649-425b-4092-bf53-29792152c925","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"Premi","ws-opts":{"path":"/sshkit/Derty76/634d98433b103/","headers":{"host":"zoom.us"}},"server":"41.216.177.234","port":"80","uuid":"6fea1649-425b-4092-bf53-29792152c925","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇮🇩","ws-opts":{"path":"/sshkit/Derty76/634d98433b103/","headers":{"host":"zoom.us"}},"server":"41.216.177.234","port":"80","uuid":"6fea1649-425b-4092-bf53-29792152c925","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"AntyFilter","ws-opts":{"path":"/sshkit/Derty76/634d98433b103/","headers":{"host":"zoom.us"}},"server":"41.216.177.234","port":"80","uuid":"6fea1649-425b-4092-bf53-29792152c925","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🌎","ws-opts":{"path":"/sshkit/Derty76/634d98433b103/","headers":{"host":"zoom.us"}},"server":"41.216.177.234","port":"80","uuid":"6fea1649-425b-4092-bf53-29792152c925","alterId":"0","cipher":"auto","network":"ws"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇺🇸UnitedStates_1
-      - 🇺🇸UnitedStates_2
-      - 🇮🇩Indonesia
-      - 🇯🇵Japan
-      - 🇺🇸Honolulu@game_file2020
-      - '@v2rayNG99منبعکانفینگ'
+      - VME
+      - Shdow
+      - My
+      - Premi
+      - 🇮🇩
+      - AntyFilter
+      - 🌎
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇸UnitedStates_1
-      - 🇺🇸UnitedStates_2
-      - 🇮🇩Indonesia
-      - 🇯🇵Japan
-      - 🇺🇸Honolulu@game_file2020
-      - '@v2rayNG99منبعکانفینگ'
+      - VME
+      - Shdow
+      - My
+      - Premi
+      - 🇮🇩
+      - AntyFilter
+      - 🌎
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸UnitedStates_1
-      - 🇺🇸UnitedStates_2
-      - 🇮🇩Indonesia
-      - 🇯🇵Japan
-      - 🇺🇸Honolulu@game_file2020
-      - '@v2rayNG99منبعکانفینگ'
+      - VME
+      - Shdow
+      - My
+      - Premi
+      - 🇮🇩
+      - AntyFilter
+      - 🌎
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸UnitedStates_1
-      - 🇺🇸UnitedStates_2
-      - 🇮🇩Indonesia
-      - 🇯🇵Japan
-      - 🇺🇸Honolulu@game_file2020
-      - '@v2rayNG99منبعکانفینگ'
+      - VME
+      - Shdow
+      - My
+      - Premi
+      - 🇮🇩
+      - AntyFilter
+      - 🌎
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇺🇸UnitedStates_1
-      - 🇺🇸UnitedStates_2
-      - 🇮🇩Indonesia
-      - 🇯🇵Japan
-      - 🇺🇸Honolulu@game_file2020
-      - '@v2rayNG99منبعکانفینگ'
+      - VME
+      - Shdow
+      - My
+      - Premi
+      - 🇮🇩
+      - AntyFilter
+      - 🌎
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸UnitedStates_1
-      - 🇺🇸UnitedStates_2
-      - 🇮🇩Indonesia
-      - 🇯🇵Japan
-      - 🇺🇸Honolulu@game_file2020
-      - '@v2rayNG99منبعکانفینگ'
+      - VME
+      - Shdow
+      - My
+      - Premi
+      - 🇮🇩
+      - AntyFilter
+      - 🌎
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -110,12 +117,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸UnitedStates_1
-      - 🇺🇸UnitedStates_2
-      - 🇮🇩Indonesia
-      - 🇯🇵Japan
-      - 🇺🇸Honolulu@game_file2020
-      - '@v2rayNG99منبعکانفینگ'
+      - VME
+      - Shdow
+      - My
+      - Premi
+      - 🇮🇩
+      - AntyFilter
+      - 🌎
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
